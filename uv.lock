@@ -353,16 +353,21 @@ name = "chemspace-mcp"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "fastmcp" },
+]
+
+[package.optional-dependencies]
+agent = [
     { name = "fast-agent-mcp", version = "0.2.25", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.13.5'" },
     { name = "fast-agent-mcp", version = "0.3.29", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.13.5'" },
-    { name = "fastmcp" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "fast-agent-mcp", specifier = ">=0.2.25" },
+    { name = "fast-agent-mcp", marker = "extra == 'agent'", specifier = ">=0.2.25" },
     { name = "fastmcp", specifier = ">=2.13.1" },
 ]
+provides-extras = ["agent"]
 
 [[package]]
 name = "click"
