@@ -62,7 +62,8 @@ mcp:
 
 Then run the example interface with FastAgent:
 ```bash
-uv run --extra agent example/agent.py
+cd example
+uv run --extra agent agent.py
 ```
 
 ## Usage
