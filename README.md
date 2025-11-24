@@ -19,7 +19,7 @@ A Model Context Protocol (MCP) server that provides a wrapper for the Chemspace 
 
 ### Prerequisites
 
-Install `uv` (universal Python package installer):
+Install `uv`:
 
 ```sh
 # macOS
@@ -47,7 +47,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ### For use with FastAgent
 
-Configure `example/fastagent.secrets.yaml`:
+Configure `example/fastagent.secrets.yaml`. Environment variables set here will override the ones in your shell:
 
 ```yaml
 anthropic:
